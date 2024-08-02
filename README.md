@@ -1,4 +1,4 @@
-# Learning_About_Blockchain
+# Learning About Blockchain
  Projects that familiarize me with blockchain technology
 
 
