@@ -4,7 +4,7 @@ class SandDollarBlock:
     
     def __init__(self, previous_block_hash, transaction_list):
         self.previous_block_hash = previous_block_hash
-        self.transaction_list = transaction=transaction_list
+        self.transaction_list = transaction_list
 
         self.block_data = "--->".join(transaction_list) + "--->" + previous_block_hash
         self.block_hash = hashlib.sha256(self.block_data.encode()).hexdigest()
@@ -25,13 +25,13 @@ def main():
     print("Initial Hash: " , initial_block.block_hash, "\n")
     
     #2 Block:
-    second_block = SandDollarBlock("Initial String", [t3, t4])
+    second_block = SandDollarBlock(initial_block.block_hash, [t3, t4])
 
     print("Second Block Data: ",second_block.block_data, "\n")
     print("Second Hash: " , second_block.block_hash, "\n")
     
     #3 Block:
-    third_block = SandDollarBlock("Initial String", [t5, t6])
+    third_block = SandDollarBlock(second_block.block_hash, [t5, t6])
 
     print("Third Block Data: ", third_block.block_data, "\n")
     print("Third Hash: " , third_block.block_hash, "\n")
