@@ -1,6 +1,15 @@
 
 import hashlib
 class SandDollarBlock:
+    '''
+        Makiya Laurenza
+            SandDollarBlock represents a single block on the blockchain
+            
+            previous_block_hash (str): The hash of the previous block in the chain.
+            transaction_list (list): List of transactions included in this block.
+            
+            "SD" == SandDollar coin
+    '''
     
     def __init__(self, previous_block_hash, transaction_list):
         self.previous_block_hash = previous_block_hash
